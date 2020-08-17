@@ -1,0 +1,771 @@
+@import "vars"
+@import "fonts"
+
+::placeholder
+  color: $default-color
+
+::selection
+  background-color: $gray
+  color: $default-color
+
+html
+  overflow-x: hidden
+
+body
+  font-family: $default-font
+  font-size: $default-size
+  font-weight: $default-weight
+  color: $default-color
+  min-width: 320px
+  position: relative
+  line-height: 1.2
+  overflow-x: hidden
+  background-color: $fon
+  select
+    background-color: $fon
+    outline: none
+    appearance: none
+  input, textarea, .mob-select
+    background-color: $fon
+    font-size: 14px
+    border-radius: $radius
+    color: $default-color
+    padding: 8px 16px
+    border: none
+    display: flex
+    align-items: center
+    outline: none
+    appearance: none
+  a
+    text-decoration: none
+    color: $default-color
+    &:hover
+      color: $default-color
+
+b, strong, .b
+  font-weight: bold
+.ital
+  font-style: italic
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.flex
+  display: flex
+  align-items: center
+  justify-content: center
+
+.column
+  display: flex
+  flex-direction: column
+
+.flex__start
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+
+.flex__between
+  display: flex
+  justify-content: space-between
+
+.flex__wrap
+  display: flex
+  flex-wrap: wrap
+
+.container
+  padding: $container-padding
+  margin: 0 auto
+  max-width: $max-width
+  width: 100%
+  height: 100%
+
+.bg__cover
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.bg__contain
+  background-position: center
+  background-repeat: no-repeat
+  background-size: contain
+
+//hamburger
+.my__hamburger
+  cursor: pointer
+  display: none
+  width: 24px
+  height: 24px
+  .hamburger__block
+    position: relative
+    height: 100%
+    .hamburger__top
+      top: 6px
+    .hamburger__bottom
+      top: 16px
+  .hamburger__top, .hamburger__bottom
+    position: absolute
+    transition: top .3s cubic-bezier(0.04, 0.04, 0.12, 1) .2999s,transform .1s cubic-bezier(0.04, 0.04, 0.12, 1)
+    width: 24px
+    height: 2px
+    background-color: $d-gray
+    border-radius: 2px
+  &.is-active
+    .hamburger__block
+      .hamburger__top, .hamburger__bottom
+        transition: top .3s cubic-bezier(0.04, 0.04, 0.12, 1),transform .1s cubic-bezier(0.04, 0.04, 0.12, 1) .29999s
+      .hamburger__top
+        top: 11px
+        transform: rotate(45deg)
+      .hamburger__bottom
+        top: 11px
+        transform: rotate(-45deg)
+.spacer
+  width: 100%
+.bt
+  font-weight: 700
+  color: $d-gray
+  &:hover
+    color: $d-gray
+.mt
+  font-weight: 600
+  color: $d-gray
+  &:hover
+    color: $d-gray
+.h1, h1
+  font-size: 32px
+  font-weight: 700
+.h2, h2
+  font-size: 20px
+  margin-bottom: 10px
+.h3, h3
+  font-size: 18px
+  margin-bottom: 10px
+.is-disable
+  pointer-events: none
+  opacity: 0.5
+.green
+  color: $green
+  font-weight: 600
+  font-size: 12px
+.ital
+  font-size: 12px
+  font-weight: 600
+  font-style: italic
+.i
+  margin-bottom: 10px
+  position: relative
+  white-space: nowrap
+  &:before
+    font-family: 'Font Awesome 5 Free'
+    margin-right: 5px
+  &__lock
+    &:before
+      position: absolute
+      content: "\f023"
+      color: $green
+      font-size: 20px
+      right: 10px
+      top: 10px
+.slider__prev
+  .fas
+    margin-right: 2px
+.slider__next
+  .fas
+    margin-left: 2px
+.checkbox__wrap
+  font-size: 12px
+.checkbox
+  position: relative
+  width: 15px
+  height: 15px
+  margin-right: 10px
+  input, .checkmark
+    cursor: pointer
+    position: absolute
+    top: 0
+    left: 0
+    width: 15px!important
+    height: 15px
+  input
+    z-index: 2
+    opacity: 0
+  .checkmark
+    background: $fon
+    border-radius: $radius
+    border: 1px solid $gray
+    margin-right: 10px
+    font-size: 11px
+  .checkmark:after
+    font-family: 'Font Awesome 5 Free'
+    color: $green
+    position: absolute
+    content: "\f00c"
+    display:  none
+    left: 1px
+    top: 0px
+  input:checked ~ .checkmark:after
+    display: block
+
+.btn
+  &__next
+    font-weight: 600
+    color: $green
+    cursor: pointer
+    &:after
+      transition: $all5
+      position: relative
+      right: -5px
+      top: 1px
+      font-family: 'Font Awesome 5 Free'
+      content: "\f105"
+    &:hover
+      color: $green
+      text-decoration: none
+      &:after
+        right: -10px
+  &__big
+    cursor: pointer
+    padding: 8px 10px
+    line-height: 1
+    font-size: 12px
+    color: #ffffff
+    border-radius: $radius
+    &:hover
+      color: #ffffff
+      text-decoration: none
+    &.btn__green
+      background-color: $green
+    &.btn__white
+      border: 1px solid #ffffff
+
+header
+  border-bottom: 1px solid $gray
+  margin-bottom: 32px
+  transition: $all3
+.logo__dark
+  display: none
+.head
+  &__wrap
+    height: 73px
+  &__logo
+    margin-right: 30px
+  &__nav
+    height: 64px
+    &>ul
+      width: 100%
+      font-weight: 600
+      a:hover
+        text-decoration: none
+      &>li
+        margin-right: 25px
+        &.menu-item-has-children
+          position: relative
+          &>a
+            &:after
+              font-family: 'Font Awesome 5 Free'
+              content: "\f0d7"
+              margin-left: 5px
+          &:hover
+            .sub-menu
+              z-index: 10
+              display: block
+    .sub-menu
+      display: none
+      padding: 10px
+      position: absolute
+      top: 16px
+      left: 0
+      background-color: $fon
+      font-size: 14px
+      white-space: nowrap
+      li
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+  &__btn
+    padding: 0 15px
+    height: 22px
+    border-right: 2px dotted #677881
+    font-weight: 600
+    font-size: 12px
+    &:last-child
+      border-right: none
+    &__search
+      position: relative
+      .fa-search
+        color: $green
+        font-size: 18px
+        cursor: pointer
+    &__login
+      cursor: pointer
+      color: $green
+      &:hover
+        color: $green
+        text-decoration: none
+.switch__wrap
+  position: relative
+  display: flex
+  margin-left: 5px
+  label
+    cursor: pointer
+    background-color: $green
+    margin-bottom: 0
+    border-radius: 7px
+    display: inline-block
+    position: relative
+    transition: all 0.3s ease-out
+    width: 24px
+    height: 14px
+    z-index: 2
+    &:after
+      content: ' '
+      background-color: $fon
+      border-radius: 50%
+      position: absolute
+      top: 1px
+      left: 1px
+      transform: translateX(0)
+      transition: $all3
+      width: 12px
+      height: 12px
+      z-index: 3
+  input
+    visibility: hidden
+    position: absolute
+    z-index: 2
+    &:checked+label
+      background-color: $green
+      &:after
+        transform: translateX(calc(100% - 2px))
+        top: 1px
+        background-color: $dark
+.search
+  &__rezult
+    display: none
+    &.is-active
+      display: flex
+  &__wrap
+    position: absolute
+    z-index: 20
+    top: -8px
+    right: -2px
+    border-radius: $radius
+    overflow: hidden
+    background-color: $l-gray
+    transition: width .5s
+    width: 0
+    &.is-active
+      border: 1px solid $d-gray
+      width: 290px
+  &__all
+    padding: 10px
+  &__form
+    width: 100%
+    background-color: $gray
+    input
+      width: 100%
+      background-color: $gray
+      font-weight: 600
+    .fa-search
+      cursor: pointer
+      padding: 10px
+footer
+  background-color: $dark
+  margin-top: 20px
+.foot
+  &__top
+    padding: 30px 0
+  &__logo
+    margin-right: 50px
+  &__bottom
+    border-top: 1px solid $gray
+    padding: 20px 0
+  &__copy
+    font-weight: 600
+  &__nav
+    align-self: flex-end
+    li
+      margin-right: 24px
+      font-weight: 600
+      &:last-child
+        margin-right: 0
+  &__small
+    font-size: 11px
+    text-align: end
+    max-width: 280px
+.breadcrumb
+  &__wrap
+    padding: 0
+  &__item
+    a
+      font-size: 12px
+      font-weight: normal
+      &:hover
+        text-decoration: none
+    &+.breadcrumb__item
+      a
+        margin-left: 5px
+        padding-left: 10px
+        position: relative
+        &:before
+          position: absolute
+          content: ""
+          background: $text
+          width: 4px
+          height: 4px
+          border-radius: 100%
+          top: 6px
+          left: 0px
+.figure
+  &__img
+    overflow: hidden
+    img
+      width: 100%
+  &__search
+    width: 100%
+    padding: 10px
+    border-bottom: 1px solid $d-gray
+    .figure__img
+      width: 75px
+      min-width: 75px
+      margin-right: 20px
+      border-radius: $radius
+      overflow: hidden
+    .figure__title
+      a
+        font-size: 14px
+        margin-bottom: 10px
+      span
+        font-size: 12px
+  &__sidebar__triple
+    width: 100%
+    max-width: 300px
+    position: relative
+    overflow: hidden
+    border-radius: $radius
+    margin-bottom: 20px
+    .figure__img
+      width: 100%
+    .figure__gradient
+      position: absolute
+      z-index: 1
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      background-color: rgba(0, 0, 0, 0.3)
+    .figure__title
+      z-index: 2
+      position: absolute
+      bottom: 15px
+      color: #ffffff
+      font-size: 16px
+      font-weight: bold
+      width: 100%
+      padding: 0 15px
+  &__sidebar__slider
+    padding-bottom: 20px
+    border-bottom: 1px solid $gray
+    margin-bottom: 20px
+    &:hover
+      text-decoration: none
+      .bt
+        text-decoration: underline
+    &:last-child
+      border-bottom: none
+      margin-bottom: 0
+    .figure__img
+      width: 80px
+      min-width: 80px
+      margin-right: 20px
+      border-radius: $radius
+    .bt
+       margin-bottom: 15px
+  &__company
+    margin-bottom: 15px
+    width: calc(25% - 20px)
+    &:hover
+      text-decoration: none
+      .bt
+        text-decoration: underline
+    .figure__img
+      width: 100px
+      min-width: 100px
+      margin-right: 10px
+      border-radius: $radius
+    .bt
+      margin-bottom: 10px
+      width: 100%
+    .green
+      margin-right: 5px
+  &__slider__square
+    max-width: 255px
+    margin-right: 25px
+    .figure__img
+      position: relative
+      border-radius: $radius
+      margin-bottom: 10px
+    .figure__title
+      position: absolute
+      z-index: 1
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      padding: 20px 10px
+      background: rgba(0, 0, 0, 0.5)
+      font-size: 16px
+      font-weight: 700
+      color: #fff
+      height: 100%
+      &:hover
+        text-decoration: none
+        &+.figure__click
+          opacity: 1
+    .figure__click
+      opacity: 0
+      z-index: 2
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      white-space: nowrap
+      color: #fff
+      border-radius: $radius
+      border: 1px solid #ffffff
+      padding: 8px 8px
+      font-weight: 600
+      font-size: 12px
+      background: rgba(255, 255, 255, 0.3)
+      transition: $all3
+      &:hover
+        text-decoration: none
+        opacity: 1
+    .fon__black
+      position: absolute
+      top: 10px
+      right: 10px
+      margin-right: 0
+      font-size: 11px
+    .figure__bottom
+      font-size: 12px
+      &:hover
+        text-decoration: none
+      img
+        margin-right: 10px
+      .mt
+        margin-bottom: 4px
+      .fa-eye
+        margin-right: 5px
+.main__wrap
+  width: 100%
+  max-width: calc(100% - 285px)
+.sidebar
+  &__column
+    width: 100%
+    max-width: 255px
+    margin-left: 30px
+  &__slider
+    position: relative
+    .slick-dots
+      bottom: -15px
+      li
+        border-radius: 100%
+        background: $text
+        width: 7px
+        height: 7px
+        &.slick-active
+          background: $green
+        div
+          display: none
+    &__nav
+      position: absolute
+      z-index: 10
+      top: 0px
+      right: 0
+      font-size: 20px
+      color: $text
+      .slider__btn
+        cursor: pointer
+        height: 25px
+        width: 25px
+        border-radius: 100%
+        transition: $all5
+        border: 1px solid transparent
+        &:hover
+          border: 1px solid $green
+      .slider__prev
+        margin-right: 5px
+#auth-form
+  background-color: $fon
+  position: relative
+  padding: 60px 40px 40px
+  width: 100%
+  max-width: 340px
+.fancybox-opened .fancybox-skin
+  box-shadow: none
+  border-radius: 0
+.modal
+  &__auth
+    &__wrap
+      display: none
+      width: 260px
+      &.is-active
+        display: block
+      input
+        width: 100%
+        height: 45px
+        font-weight: 600
+    &__title
+      font-size: 16px
+      font-weight: 600
+      margin-bottom: 30px
+      align-items: flex-end
+      line-height: 1
+      img
+        margin-right: 10px
+    &__link
+      color: $green
+      font-size: 12px
+      font-weight: 600
+      &:hover
+        color: $green
+        text-decoration: none
+    &__bottom
+      font-size: 12px
+      *:first-child
+        margin-right: 5px
+    &__input
+      margin-bottom: 15px
+      border: 1px solid $gray
+      border-radius: $radius
+    &__submit
+      margin: 30px 0
+      input
+        color: #ffffff
+        background-color: $green!important
+        cursor: pointer
+  &__close__btn
+    position: absolute
+    top: 20px
+    right: 20px
+    border-radius: 100%
+    background-color: $gray
+    color: #000
+    width: 30px
+    height: 30px
+    &:hover
+      color: #000
+      text-decoration: none
+
+.sect
+  margin: 20px 0
+  &__top
+    margin-bottom: 20px
+    .h2 + .fon__gray
+      margin-left: 10px
+      margin-top: 3px
+  &__slider
+    &__nav
+      z-index: 10
+      font-size: 18px
+      margin-right: 10px
+      .slider__btn
+        cursor: pointer
+        height: 26px
+        width: 26px
+        background-color: $l-gray
+        border-radius: 100%
+      .slider__prev
+        margin-right: 5px
+.scroll
+  &__sticky
+    position: fixed
+    z-index: 100
+  &__stop
+    position: relative
+    z-index: 100
+.slick-track, .slick-list, .slick__top
+  height: 100%
+.slider__top
+  width: 100%
+  height: 461px
+  overflow: hidden
+  position: relative
+  .slider
+    &__nav
+      position: absolute
+      z-index: 10
+      bottom: 30px
+      right: 30px
+      font-size: 30px
+      color: #000
+      .slider__btn
+        cursor: pointer
+        height: 40px
+        width: 40px
+        background-color: #fff
+        border-radius: 100%
+      .slider__prev
+        margin-right: 5px
+    &__item
+      display: flex!important
+      align-items: flex-end
+      width: 100%
+      height: 100%
+      border-radius: $radius
+      position: relative
+      &:hover
+        text-decoration: none
+    &__label__top
+      position: absolute
+      top: 30px
+      left: 30px
+      padding: 8px
+      border-radius: $radius
+      color: #ffffff
+      background-color: #6801cc
+    &__gradi
+      width: 100%
+      padding: 0 30px 30px
+      min-height: 50%
+      background: linear-gradient( to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)
+      justify-content: flex-end
+      align-items: flex-start
+    &__title
+      font-size: 32px
+      font-weight: 600
+      color: #ffffff
+      margin-bottom: 10px
+      max-width: 500px
+  .fon__black
+    margin-bottom: 5px
+  .btn__green
+    margin-right: 15px
+    margin-top: 10px
+  .btn__white
+    margin-top: 10px
+.fon
+  border-radius: $radius
+  margin-right: 10px
+  font-size: 12px
+  line-height: 1
+  &__black
+    padding: 5px 7px
+    color: #ffffff
+    background-color: rgba(0,0,0,0.9)
+    &:hover
+      color: #ffffff
+  &__gray
+    padding: 3px 6px
+    background-color: $gray
+@import "dark"
+@import "media"
+// Always at the end
+
+

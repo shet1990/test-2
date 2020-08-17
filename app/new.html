@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>Title</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="images/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebSite" class="">
+
+<header>
+    <div class="container column">
+        <div class="head__wrap flex flex__between">
+            <div class="head__logo" itemscope itemtype="http://schema.org/Organization">
+                <a itemprop="url" href="/">
+                    <img class="logo__light" itemprop="logo" src="/images/logo.png" alt="logo">
+                    <img class="logo__dark" itemprop="logo" src="/images/logo-light.png" alt="logo">
+                </a>
+                <meta itemprop="name" content="NAME">
+                <meta itemprop="address" content="ADDRESS">
+                <meta itemprop="telephone" content="TELEPHONE">
+            </div>
+            <nav class="head__nav flex" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                <ul class="flex__between flex__wrap" itemprop="about" itemscope="" itemtype="http://schema.org/ItemList">
+                    <li itemprop="itemListElement">
+                        <a href="#" itemprop="url">Кинокомпании</a>
+                        <meta itemprop="name" content="Главная" />
+                    </li>
+                    <li itemprop="itemListElement">
+                        <a href="#" itemprop="url">Подборки</a>
+                        <meta itemprop="name" content="Популярные клипы" />
+                    </li>
+                    <li itemprop="itemListElement">
+                        <a href="#" itemprop="url">Фильмы</a>
+                        <meta itemprop="name" content="Новые клипы" />
+                    </li>
+                    <li itemprop="itemListElement">
+                        <a href="#" itemprop="url">Сериалы</a>
+                        <meta itemprop="name" content="Исполнители" />
+                    </li>
+                    <li class="menu-item-has-children" itemprop="itemListElement">
+                        <a href="#" itemprop="url">Топ рейтинги</a>
+                        <meta itemprop="name" content="Жанры" />
+
+                        <ul class="sub-menu" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+                            <li itemprop="itemListElement">
+                                <a href="#" itemprop="url">Рейтинг ужасов</a>
+                                <meta itemprop="name" content="R`N`B" />
+                            </li>
+                            <li itemprop="itemListElement">
+                                <a href="#" itemprop="url">Рейтинг фэнтэзи</a>
+                                <meta itemprop="name" content="Pop" />
+                            </li>
+                            <li itemprop="itemListElement">
+                                <a href="#" itemprop="url">Рейтинг боевиков</a>
+                                <meta itemprop="name" content="Rock" />
+                            </li>
+                            <li itemprop="itemListElement">
+                                <a href="#" itemprop="url">Рейтинг комедий</a>
+                                <meta itemprop="name" content="Electronic" />
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="head__btn__wrap flex">
+                <div class="head__btn head__btn__search flex">
+                    <span class="fas fa-search"></span>
+                    <div class="search__wrap">
+                        <form action="#" class="search__form flex">
+                            <input type="text" class="search__input" placeholder="Поиск..">
+                            <span class="fas fa-search"></span>
+                        </form>
+                        <div class="search__rezult column">
+                            <div class="figure__list column">
+                                <div class="figure figure__search flex__start" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="#" rel="nofollow" class="figure__img">
+                                        <img src="./images/televizor.png" data-src="./images/film.jpg" width="75" height="75" alt="">
+                                        <meta itemprop="image" content="./images/film.jpg">
+                                        <meta itemprop="width" content="75">
+                                        <meta itemprop="height" content="75">
+                                    </a>
+                                    <div class="figure__title column">
+                                        <a class="bt" href="#">Top Gun:Maverick Official Trailer 2020</a>
+                                        <meta itemprop="name" content="Top Gun:Maverick Official Trailer 2020">
+                                        <span class="figure__sub__title">Trailer</span>
+                                    </div>
+                                </div>
+                                <div class="figure figure__search flex__start" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="#" rel="nofollow" class="figure__img">
+                                        <img src="./images/televizor.png" data-src="./images/film.jpg" width="75" height="75" alt="">
+                                        <meta itemprop="image" content="./images/film.jpg">
+                                        <meta itemprop="width" content="75">
+                                        <meta itemprop="height" content="75">
+                                    </a>
+                                    <div class="figure__title column">
+                                        <a class="bt" href="#">Top Gun (1986)</a>
+                                        <meta itemprop="name" content="Top Gun:Maverick Official Trailer 2020">
+                                        <span class="figure__sub__title">Фильм</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="search__all">
+                                Все результаты >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="head__btn head__btn__switch flex">
+                    <span>Темный режим</span>
+                    <div class="switch__wrap">
+                        <input type="checkbox" id="switch" />
+                        <label for="switch"></label>
+                    </div>
+                </div>
+                <a href="#auth-form" class="head__btn head__btn__login flex">
+                    <span>Вход</span>
+                </a>
+            </div>
+            <div class="my__hamburger">
+                <div class="hamburger__block">
+                    <div class="hamburger__top"></div>
+                    <div class="hamburger__bottom"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+</main>
+
+<div id="auth-form" style="display: none;">
+    <a href="#" class="modal__close__btn flex" onclick="$.fancybox.close(); return false;">
+        <span class="fas fa-times"></span>
+    </a>
+    <div class="modal__auth__wrap is-active" id="login">
+        <h3 class="modal__auth__title flex mt">
+            <img src="./images/televizor.png" alt="">
+            Вход
+        </h3>
+        <form class="modal__auth__form">
+            <div class="modal__auth__input">
+                <input type="email" placeholder="Email" class="flex">
+            </div>
+            <div class="modal__auth__input i i__lock">
+                <input type="password" placeholder="Пароль" class="flex">
+            </div>
+            <div class="flex__between">
+                <div class="checkbox__wrap flex__start">
+                    <div class="checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                    </div><span>Запомнить</span>
+                </div>
+                <a href="#restore" class="modal__auth__link">Забыли пароль?</a>
+            </div>
+            <div class="modal__auth__submit">
+                <input type="submit" class="flex" value="Войти">
+            </div>
+            <div class="modal__auth__bottom flex">
+                <span>Ещё нет акаунта?</span>
+                <a href="#registration" class="modal__auth__link">Регистрация</a>
+            </div>
+        </form>
+    </div>
+    <div class="modal__auth__wrap" id="registration">
+        <h3 class="modal__auth__title flex mt">
+            <img src="./images/televizor.png" alt="">
+            Регистрация
+        </h3>
+        <form class="modal__auth__form">
+            <div class="modal__auth__input">
+                <input type="email" placeholder="Email" class="flex">
+            </div>
+            <div class="modal__auth__input">
+                <input type="text" placeholder="Имя" class="flex">
+            </div>
+            <div class="modal__auth__input i i__lock">
+                <input type="password" placeholder="Пароль" class="flex">
+            </div>
+            <div class="modal__auth__submit">
+                <input type="submit" class="flex" value="Зарегистрироватся">
+            </div>
+            <div class="modal__auth__bottom flex">
+                <a href="#login" class="modal__auth__link">Войти</a>
+            </div>
+        </form>
+    </div>
+    <div class="modal__auth__wrap" id="restore">
+        <h3 class="modal__auth__title flex mt">
+            <img src="./images/televizor.png" alt="">
+            Восстановление пароля
+        </h3>
+        <form class="modal__auth__form">
+            <div class="modal__auth__input i i__lock">
+                <input type="password" placeholder="Новый пароль" class="flex">
+            </div>
+            <div class="modal__auth__input i i__lock">
+                <input type="password" placeholder="Повторите пароль" class="flex">
+            </div>
+            <div class="modal__auth__submit">
+                <input type="submit" class="flex" value="Восстановить">
+            </div>
+            <div class="modal__auth__bottom flex">
+                <a href="#login" class="modal__auth__link">Войти /</a>
+                <a href="#registration" class="modal__auth__link">Регистрация</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="foot__top">
+        <div class="container flex flex__between">
+            <div class="foot__logo" itemscope itemtype="http://schema.org/Organization">
+                <a itemprop="url" href="/">
+                    <img itemprop="logo" src="/images/logo-light.png" alt="logo">
+                </a>
+                <meta itemprop="name" content="NAME">
+                <meta itemprop="address" content="ADDRESS">
+                <meta itemprop="telephone" content="TELEPHONE">
+            </div>
+            <nav class="foot__nav flex" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                <ul class="flex__between" itemprop="about" itemscope="" itemtype="http://schema.org/ItemList">
+                    <li itemprop="itemListElement">
+                        <a href="#" itemprop="url">Контакты</a>
+                        <meta itemprop="name" content="Контакты" />
+                    </li>
+                    <li itemprop="itemListElement">
+                        <a href="#" itemprop="url">Карта сайта</a>
+                        <meta itemprop="name" content="Карта сайта" />
+                    </li>
+                    <li itemprop="itemListElement">
+                        <a href="#" itemprop="url">Политика конфиденциальности</a>
+                        <meta itemprop="name" content="Политика конфиденциальности" />
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="foot__bottom ">
+        <div class="container flex flex__between">
+            <span class="foot__copy">© 2019 Tizer.tv</span>
+            <span class="foot__small"> Сайт может содержать контент, не предназначенный для лиц младше 18 лет</span>
+        </div>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="/css/libs.min.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/slick.css">
+<link rel="stylesheet" href="/css/slick-theme.css">
+<link rel="stylesheet" href="/css/fontawesome.css">
+<link rel="stylesheet" href="/css/loader.css">
+<link rel="stylesheet" href="/css/main.min.css">
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/jquery.lazy.js"></script>
+<script src="/js/common.js"></script>
+
+</body>
+</html>
